@@ -6,12 +6,47 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Weather In <span class="city-name">Vancouver</span></h1>
+    <h1>Weather In <span id="city-name">Vancouver</span></h1>
     <form id="city-form">
       <label for="city-input">Enter City:</label>
       <input type="text" id="city-input" name="city" required />
       <button type="submit">Search</button>
     </form>
+    <section id="current-weather">
+      <h2>Current Weather</h2>
+      <p>
+        Temperature: <span id="temperature">--</span>°C
+        <span id="emoji">🌤</span>
+      </p>
+      <p>Feels Like: <span id="feel-temp">--°C</span></p>
+      <p><span id="description">Few Clouds</span></p>
+    </section>
+
+    <section id="five-day-forecast">
+      <h3>Five Day Forecast</h3>
+      <div id="grid-forecast">
+        <div class="day-forecast">
+          <p class="day"></p>
+          <p>Temp: <span class="day-temp">--</span>°C</p>
+        </div>
+        <div class="day-forecast">
+          <p class="day"></p>
+          <p>Temp: <span class="day-temp">--</span>°C</p>
+        </div>
+        <div class="day-forecast">
+          <p class="day"></p>
+          <p>Temp: <span class="day-temp">--</span>°C</p>
+        </div>
+        <div class="day-forecast">
+          <p class="day"></p>
+          <p>Temp: <span class="day-temp">--</span>°C</p>
+        </div>
+        <div class="day-forecast">
+          <p class="day"></p>
+          <p>Temp: <span class="day-temp">--</span>°C</p>
+        </div>
+      </div>
+    </section>
     <footer>
       Coded by
       <a href="https://github.com/vcheungg" target="_blank"> Vivian Cheung </a>
