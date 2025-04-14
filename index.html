@@ -7,60 +7,64 @@
     <title>Weather</title>
   </head>
   <body>
-    <header>
-      <h1>Weather In <span id="city-name">Vancouver</span></h1>
-      <form id="city-form">
-        <label for="city-input">Enter City:</label>
-        <input type="search" id="city-input" name="city" required />
-        <button type="submit">Search</button>
-      </form>
-    </header>
-    <section id="current-weather">
-      <h2>Current Weather</h2>
-      <p>
-        Temperature: <span id="temperature">--</span>°C
-        <span id="emoji">🌤</span>
-      </p>
-      <p>Feels Like: <span id="feel-temp">--°C</span></p>
-      <p><span id="description">Few Clouds</span></p>
-    </section>
+    <div class="weather-section">
+      <header>
+        <h1>Weather In <span id="city-name">Vancouver</span></h1>
+        <form id="city-form">
+          <label for="city-input">Enter City:</label>
+          <input type="search" id="city-input" name="city" required />
+          <button type="submit">Search</button>
+        </form>
+      </header>
+      <section id="current-weather">
+        <h2>Current Weather</h2>
+        <p>
+          Temperature: <span id="temperature">--</span>°C
+          <span id="emoji">🌤</span>
+        </p>
+        <p>Feels Like: <span id="feel-temp">--°C</span></p>
+        <p><span id="description">Few Clouds</span></p>
+      </section>
 
-    <section id="five-day-forecast">
-      <h3>Five Day Forecast</h3>
-      <div id="grid-forecast">
-        <div class="day-forecast">
-          <p class="day"></p>
-          <p>Temp: <span class="day-temp">--</span>°C</p>
+      <section id="five-day-forecast">
+        <h3>Five Day Forecast</h3>
+        <div id="grid-forecast">
+          <div class="day-forecast">
+            <p class="day"></p>
+            <p>Temp: <span class="day-temp">--</span>°C</p>
+          </div>
+          <div class="day-forecast">
+            <p class="day"></p>
+            <p>Temp: <span class="day-temp">--</span>°C</p>
+          </div>
+          <div class="day-forecast">
+            <p class="day"></p>
+            <p>Temp: <span class="day-temp">--</span>°C</p>
+          </div>
+          <div class="day-forecast">
+            <p class="day"></p>
+            <p>Temp: <span class="day-temp">--</span>°C</p>
+          </div>
+          <div class="day-forecast">
+            <p class="day"></p>
+            <p>Temp: <span class="day-temp">--</span>°C</p>
+          </div>
         </div>
-        <div class="day-forecast">
-          <p class="day"></p>
-          <p>Temp: <span class="day-temp">--</span>°C</p>
-        </div>
-        <div class="day-forecast">
-          <p class="day"></p>
-          <p>Temp: <span class="day-temp">--</span>°C</p>
-        </div>
-        <div class="day-forecast">
-          <p class="day"></p>
-          <p>Temp: <span class="day-temp">--</span>°C</p>
-        </div>
-        <div class="day-forecast">
-          <p class="day"></p>
-          <p>Temp: <span class="day-temp">--</span>°C</p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      Coded by
-      <a href="https://github.com/vcheungg" target="_blank"> Vivian Cheung </a>
-      and is
-      <a href="https://github.com/vcheungg/v-weather-app" target="_blank">
-        on Github</a
-      >
-      and
-      <a href="https://weather-v-app.netlify.app/" target="_blank">
-        hosted on Netlify</a
-      >
-    </footer>
+      </section>
+      <footer>
+        Coded by
+        <a href="https://github.com/vcheungg" target="_blank">
+          Vivian Cheung
+        </a>
+        and is
+        <a href="https://github.com/vcheungg/v-weather-app" target="_blank">
+          on Github</a
+        >
+        and
+        <a href="https://weather-v-app.netlify.app/" target="_blank">
+          hosted on Netlify</a
+        >
+      </footer>
+    </div>
   </body>
 </html>

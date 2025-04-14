@@ -1,0 +1,10 @@
+body {
+  background-color: #817fa0;
+}
+
+.weather-section {
+  background-color: #9faac3;
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 30px;
+}
