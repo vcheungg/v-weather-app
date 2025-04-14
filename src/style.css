@@ -7,4 +7,9 @@ body {
   max-width: 500px;
   margin: 30px auto;
   padding: 30px;
+  box-shadow: 15px;
+}
+
+.current-temp {
+  right: 0;
 }
