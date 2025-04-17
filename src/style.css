@@ -1,5 +1,8 @@
 body {
   background-color: #817fa0;
+  font-family: "Arvo", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .weather-section {
@@ -7,9 +10,31 @@ body {
   max-width: 500px;
   margin: 30px auto;
   padding: 30px;
-  box-shadow: 15px;
+  box-shadow: 15px 15px 15px #e3e8e4;
+  border-radius: 15px;
 }
 
+.current-weather-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .current-temp {
-  right: 0;
+  font-size: 44px;
+}
+#emoji {
+  font-size: 44px;
+}
+.grid-emoji {
+  text-align: center;
+}
+
+#grid-forecast {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  border-radius: 10px;
+  padding: 5px 10px 5px 10px;
 }

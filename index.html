@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
     <title>Weather</title>
   </head>
   <body>
@@ -18,13 +24,16 @@
       </header>
       <section id="current-weather">
         <h2>Current Weather</h2>
-        <div class="current-temp">
-          Temperature: <span id="temperature">--</span>°C
-          <span id="emoji">🌤</span>
-        </div>
-        <div class="current-description">
-          <p>Feels Like: <span id="feel-temp">--°C</span></p>
-          <p><span id="description">Few Clouds</span></p>
+        <div class="current-weather-wrapper">
+          <div class="current-description">
+            <p>Feels Like: <span id="feel-temp">--°C</span></p>
+            <p><span id="description">Few Clouds</span></p>
+          </div>
+          <div class="current-temp">
+            <span id="temperature"><strong>--</strong></span
+            ><strong>°C</strong>
+            <span id="emoji">🌤</span>
+          </div>
         </div>
       </section>
 
@@ -34,22 +43,27 @@
           <div class="day-forecast">
             <p class="day"></p>
             <p>Temp: <span class="day-temp">--</span>°C</p>
+            <p class="grid-emoji">☀️</p>
           </div>
           <div class="day-forecast">
             <p class="day"></p>
             <p>Temp: <span class="day-temp">--</span>°C</p>
+            <p class="grid-emoji">☀️</p>
           </div>
           <div class="day-forecast">
             <p class="day"></p>
             <p>Temp: <span class="day-temp">--</span>°C</p>
+            <p class="grid-emoji">☀️</p>
           </div>
           <div class="day-forecast">
             <p class="day"></p>
             <p>Temp: <span class="day-temp">--</span>°C</p>
+            <p class="grid-emoji">☀️</p>
           </div>
           <div class="day-forecast">
             <p class="day"></p>
             <p>Temp: <span class="day-temp">--</span>°C</p>
+            <p class="grid-emoji">☀️</p>
           </div>
         </div>
       </section>
