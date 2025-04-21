@@ -6,6 +6,9 @@ function updateWeather(response) {
   let descriptionElement = document.querySelector("#description");
   let feelTemperature = document.querySelector("#feel-temp");
   let iconElement = document.querySelector("#icon");
+  let humidityElement = document.querySelector("#humidity");
+  let windSpeed = document.querySelector("#wind-speed");
+  let wind = response.data.wind.speed;
 
   iconElement.innerHTML = `<img
                 src="${response.data.condition.icon_url}"
@@ -15,6 +18,8 @@ function updateWeather(response) {
   cityElement.innerHTML = response.data.city;
   descriptionElement.innerHTML = response.data.condition.description;
   feelTemperature.innerHTML = Math.round(feel);
+  humidityElement.innerHTML = response.data.temperature.humidity;
+  windSpeed.innerHTML = Math.round(wind);
   temperatureElement.innerHTML = Math.round(temp);
 }
 function citySearch(city) {
