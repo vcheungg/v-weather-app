@@ -1,9 +1,14 @@
 function updateWeather(response) {
   let temperatureElement = document.querySelector("#temperature");
   let temp = response.data.temperature.current;
+  let feel = response.data.temperature.feels_like;
   let cityElement = document.querySelector("#city-name");
+  let descriptionElement = document.querySelector("#description");
+  let feelTemperature = document.querySelector("#feel-temp");
 
   cityElement.innerHTML = response.data.city;
+  descriptionElement.innerHTML = response.data.condition.description;
+  feelTemperature.innerHTML = Math.round(feel);
   temperatureElement.innerHTML = Math.round(temp);
 }
 function citySearch(city) {
