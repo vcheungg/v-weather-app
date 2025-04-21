@@ -5,6 +5,12 @@ function updateWeather(response) {
   let cityElement = document.querySelector("#city-name");
   let descriptionElement = document.querySelector("#description");
   let feelTemperature = document.querySelector("#feel-temp");
+  let iconElement = document.querySelector("#icon");
+
+  iconElement.innerHTML = `<img
+                src="${response.data.condition.icon_url}"
+                class="weather-app-icon"
+              />`;
 
   cityElement.innerHTML = response.data.city;
   descriptionElement.innerHTML = response.data.condition.description;
