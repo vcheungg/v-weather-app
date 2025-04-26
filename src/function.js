@@ -57,14 +57,20 @@ function handleSubmit(event) {
 
   citySearch(searchInput.value);
 }
-
+function getForecast(city) {
+  let apiKey = "047t2173e3a39c66942c701baf3a6of5";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+}
 function displayForecast() {
   let forecast = document.querySelector("#forecast");
 
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHtml = "";
 
   days.forEach(function (day) {
-    forecast.innerHTML = `
+    forecastHtml =
+      forecastHtml +
+      `
 <div class="day-forecast">
     <div class="day">${day}</div>
     <div class="grid-emoji">☀️</div>
@@ -75,6 +81,7 @@ function displayForecast() {
 </div>
 `;
   });
+  forecast.innerHTML = forecastHtml;
 }
 
 let searchForm = document.querySelector("#city-form");
