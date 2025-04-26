@@ -57,7 +57,28 @@ function handleSubmit(event) {
 
   citySearch(searchInput.value);
 }
+
+function displayForecast() {
+  let forecast = document.querySelector("#forecast");
+
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  days.forEach(function (day) {
+    forecast.innerHTML = `
+<div class="day-forecast">
+    <div class="day">${day}</div>
+    <div class="grid-emoji">☀️</div>
+    <div class="day-temps">
+        <div class="day-temp"><strong>15°C</strong></div>
+        <div class="day-temp">9°C</div>
+    </div>
+</div>
+`;
+  });
+}
+
 let searchForm = document.querySelector("#city-form");
 searchForm.addEventListener("submit", handleSubmit);
 
 citySearch("Vancouver");
+displayForecast();
