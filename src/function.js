@@ -24,6 +24,8 @@ function updateWeather(response) {
   humidityElement.innerHTML = response.data.temperature.humidity;
   windSpeed.innerHTML = Math.round(wind);
   temperatureElement.innerHTML = Math.round(temp);
+
+  getForecast(response.data.city);
 }
 
 function formattedDate(date) {
@@ -59,9 +61,11 @@ function handleSubmit(event) {
 }
 function getForecast(city) {
   let apiKey = "047t2173e3a39c66942c701baf3a6of5";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
 }
-function displayForecast() {
+
+function displayForecast(response) {
   let forecast = document.querySelector("#forecast");
 
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -88,4 +92,5 @@ let searchForm = document.querySelector("#city-form");
 searchForm.addEventListener("submit", handleSubmit);
 
 citySearch("Vancouver");
+getForecast("Vancouver");
 displayForecast();
