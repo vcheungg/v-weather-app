@@ -60,10 +60,10 @@ body {
   padding: 0 10px;
 }
 .grid-emoji {
-  margin-top: 10px;
-  font-size: 28px;
-  text-align: center;
-  margin-bottom: 10px;
+  width: 70px;
+  height: 70px;
+  display: block;
+  margin: 0 auto;
 }
 #forecast {
   display: flex;
