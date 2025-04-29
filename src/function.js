@@ -47,6 +47,7 @@ function formattedDate(date) {
   }
   return `${day} ${hours}:${minutes}`;
 }
+
 function citySearch(city) {
   let apiKey = "047t2173e3a39c66942c701baf3a6of5";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
@@ -102,4 +103,4 @@ function displayForecast(response) {
 let searchForm = document.querySelector("#city-form");
 searchForm.addEventListener("submit", handleSubmit);
 
-citySearch("Vancouver");
+citySearch();
